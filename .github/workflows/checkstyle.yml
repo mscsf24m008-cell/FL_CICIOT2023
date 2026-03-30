@@ -9,11 +9,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Humne version ko 'master' ya 'v1' par set kar diya hai jo hamesha chalta hai
       - name: Run checkstyle with reviewdog
         uses: asaasdev/checkstyle-action@master 
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Niche wali 2 lines update ki gayi hain:
+          checkstyle_config: checkstyle.xml
+          filter_mode: nofilter
           reporter: github-pr-review
           level: warning
-          filter_mode: added
