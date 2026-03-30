@@ -4,7 +4,7 @@ package pkg;
 public class Hello1 {
     public static void main(String[] args) {
         System.out.println("Welcome to java");
-        int x = 10; 
+        int x=10; 
         System.out.println("Hello, Checkstyle!");
         printMessage("Testing the plugin");
     }
