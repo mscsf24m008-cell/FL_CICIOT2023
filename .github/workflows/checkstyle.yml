@@ -13,8 +13,8 @@ jobs:
         uses: asaasdev/checkstyle-action@master 
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Niche wali 2 lines update ki gayi hain:
-          checkstyle_config: checkstyle.xml
-          filter_mode: nofilter
+          # Yahan 'checkstyle_config' ki jagah 'configuration_file' likhein:
+          configuration_file: checkstyle.xml
           reporter: github-pr-review
           level: warning
+          filter_mode: nofilter
